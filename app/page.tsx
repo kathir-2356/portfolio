@@ -5,6 +5,7 @@ import Stats from "@/components/Stats";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import AutomationShowcase from "@/components/AutomationShowcase";
 import Certifications from "@/components/Certifications";
 import Education from "@/components/Education";
 import CSFoundations from "@/components/CSFoundations";
@@ -42,6 +43,8 @@ export default function Home() {
         <Experience />
         <Divider />
         <Projects />
+        <Divider />
+        <AutomationShowcase />
         <Divider />
         <Certifications />
         <Divider />

@@ -127,12 +127,12 @@ const terminalLines = [
   { text: "> cloud-automation", delay: 1700, type: "tag" },
   { text: "> ai-systems", delay: 2000, type: "tag" },
   { text: "", delay: 2200, type: "blank" },
-  { text: "$ cat stack.json", delay: 2500, type: "cmd" },
-  { text: '{ "lang": ["Python","Java"],', delay: 2900, type: "json" },
-  { text: '  "cloud": ["AWS","Terraform"],', delay: 3100, type: "json" },
-  { text: '  "ai": ["LLMs","RAG"] }', delay: 3300, type: "json" },
-  { text: "", delay: 3500, type: "blank" },
-  { text: "status: building...", delay: 3700, type: "status" },
+  { text: "$ terraform apply -auto-approve", delay: 2500, type: "cmd" },
+  { text: "aws_vpc.main: Creating...", delay: 2900, type: "json" },
+  { text: "aws_instance.app: Creating...", delay: 3200, type: "json" },
+  { text: "Apply complete! 6 resources added.", delay: 3600, type: "status" },
+  { text: "", delay: 3800, type: "blank" },
+  { text: "status: infrastructure live ✓", delay: 4000, type: "done" },
 ];
 
 function Terminal() {
@@ -151,6 +151,7 @@ function Terminal() {
     if (type === "tag") return "#A78BFA";
     if (type === "json") return "#34D399";
     if (type === "status") return "#FBBF24";
+    if (type === "done") return "#34D399";
     return "transparent";
   };
 
